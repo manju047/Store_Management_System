@@ -88,3 +88,78 @@ if ($current_quantity >= $quantity_to_subtract) {
 $conn->close();
 ?>
 
+// search page trail code (index.php)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Information</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Function to fetch and update stock information
+            function updateStockInfo() {
+                $.ajax({
+                    url: "get_stock_info.php", // PHP script to fetch stock info
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        // Update HTML elements with fetched data
+                        $("#stock_id").text(data.stock_id);
+                        $("#stock_name").text(data.stock_name);
+                        // Update other fields similarly
+                    }
+                });
+            }
+
+            // Fetch and update data initially
+            updateStockInfo();
+
+            // Set interval to fetch and update data every X seconds
+            setInterval(updateStockInfo, 5000); // Update every 5 seconds
+        });
+    </script>
+</head>
+<body>
+    <h1>Stock Information</h1>
+    <p>Stock ID: <span id="stock_id"></span></p>
+    <p>Stock Name: <span id="stock_name"></span></p>
+    <!-- Add other fields similarly -->
+</body>
+</html>
+
+
+// PHP Script (get_stock_info.php): This PHP script will fetch stock information from the database and 
+return it in JSON format.
+
+<?php
+$servername = "your_server_name";
+$username = "your_username";
+$password = "your_password";
+$dbname = "your_database_name";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$query = "SELECT stock_id, stock_name FROM stock WHERE ..."; // Your query to fetch data
+$result = $conn->query($query);
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $data = array(
+        "stock_id" => $row["stock_id"],
+        "stock_name" => $row["stock_name"],
+        // Add other fields similarly
+    );
+    echo json_encode($data);
+} else {
+    echo "No data available.";
+}
+
+$conn->close();
+?>
+
+
