@@ -241,6 +241,30 @@
       <h1>Hi <span class="text-primary">Admin</span>, Welcome back</h1>
       <p>Welocme to Store Mananagement System</p>
     </div>
+    
+    <div class="container mt-5">
+      <h1 class="text-center"></h1>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Items and Total Stock</h2>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Total Stock</th>
+              </tr>
+            </thead>
+            <tbody id="stockTableBody">
+              <!-- Data will be added dynamically through JavaScript -->
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <h2>Quantity of stock</h2>
+          <canvas id="stockChart"></canvas>
+        </div>
+      </div>
+    </div>
 
     <!-- statistics data >
     <div class="statistics">
