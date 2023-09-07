@@ -1,3 +1,4 @@
+// this is the main code to update the data in the databse stock table .....!
 <?php
 require 'connection.php';
 
