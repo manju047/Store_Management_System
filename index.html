@@ -12,6 +12,9 @@
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="assets/css/style-starter.css">
+  
+  <script src="script.js">
+  </script>
 
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
@@ -238,33 +241,35 @@
       </ol>
     </nav>
     <div class="welcome-msg pt-3 pb-4">
-      <h1>Hi <span class="text-primary">Admin</span>, Welcome back</h1>
+      <h1>Hi <span class="text-primary">Admin</span>Welcome back</h1>
       <p>Welocme to Store Mananagement System</p>
     </div>
-    
-    <div class="container mt-5">
-      <h1 class="text-center"></h1>
-      <div class="row">
-        <div class="col-md-6">
-          <h2>Items and Total Stock</h2>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Total Stock</th>
-              </tr>
-            </thead>
-            <tbody id="stockTableBody">
-              <!-- Data will be added dynamically through JavaScript -->
-            </tbody>
-          </table>
+      <!-- Bootstrap CSS link -->
+      <body>
+        <div class="container mt-5">
+          <h1 class="text-center"></h1>
+          <div class="row">
+            <div class="col-md-12">
+              <h2>Items and Total Stock</h2>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Total Stock</th>
+                  </tr>
+                </thead>
+                <tbody id="stockTableBody">
+                  <!-- Data will be added dynamically through JavaScript -->
+                </tbody>
+              </table>
+            </div>
+            
+          </div>
         </div>
-        <div class="col-md-6">
-          <h2>Quantity of stock</h2>
-          <canvas id="stockChart"></canvas>
-        </div>
-      </div>
-    </div>
+        </body>
+
+
+
 
     <!-- statistics data >
     <div class="statistics">
