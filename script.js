@@ -1,3 +1,5 @@
+//code for index page table 
+
 document.addEventListener("DOMContentLoaded", function () {
     // Sample data (replace this with your actual data)
     const stockData = [
