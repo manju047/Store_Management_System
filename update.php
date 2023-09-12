@@ -1,4 +1,3 @@
-// this is the main code to update the data in the databse stock table .....!
 <?php
 require 'connection.php';
 
@@ -28,7 +27,7 @@ $result = $connection->query($sql);
   else 
     { 
     // Product doesn't exist, insert it as a new record
-    $insertSql = "INSERT INTO store(stkid,stkquantity) VALUES ('$stkid', $stkquantity)";
+    $insertSql = "INSERT INTO store(stkid,stkquantity,stkvendor,stkprice) VALUES ('$stkid', $stkquantity,$stkvendor,$stkprice)";
     if ($connection->query($insertSql) === TRUE)
     {
         // Data inserted successfully, generate popup message
