@@ -33,7 +33,6 @@ CREATE TABLE `stk_entry` (
   `stkquantity` varchar(10) NOT NULL,
   `stkvendor` varchar(50) NOT NULL,
   `stkprice` float NOT NULL,
-  `sample` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
