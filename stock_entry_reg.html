@@ -15,6 +15,172 @@
 
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
+
+  <style>
+    .site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+  </style>
   
 </head>
 
@@ -51,7 +217,7 @@
         </li>
         <li class="active"><a href="stock_entry_reg.html"><i class="fa fa-archive"></i> <span>Stock Entry Register</span></a></li>
         <li><a href="stock_dispatch.html"><i class="fa fa-dropbox"></i> <span>Stock Dispatch Register</span></a></li>
-        <li><a href="blocks.html"><i class="fa fa-search"></i> <span>Search</span></a></li>
+        <li><a href="Search.html"><i class="fa fa-search"></i> <span>Search</span></a></li>
         <!--li><a href="forms.html"><i class="fa fa-file-text"></i> <span>Forms</span></a></li-->
       </ul>
       <!-- //sidebar nav end -->
@@ -180,7 +346,7 @@
                     <h5 class="user-name">SVREC</h5>
                     <span class="status ml-2">Store Management</span>
                   </li>
-                  <li> <a href="#"><i class="fa fa-user-circle-o"></i>Profile</a> </li>
+                  <li> <a href="http://www.svrec.ac.in"><i class="fa fa-user-circle-o"></i>Profile</a> </li>
                   <!--li> <a href="#"><i class="lnr lnr-users"></i>1k Followers</a> </li>
                   <li> <a href="#"><i class="lnr lnr-cog"></i>Setting</a> </li>
                   <li> <a href="#"><i class="lnr lnr-heart"></i>100 Likes</a> </li-->
@@ -230,7 +396,7 @@
                       <div class="form-group">
                           <label for="Stock Id" class="input__label">Stock Id</label>
                           <input type="text"   class="form-control input-style" name="stkid" id="stkid"
-                          pattern="[0-9]{4}" title="Please enter a 4-digit number" required aria-describedby="emailHelp" placeholder="Stock Id" required>
+                          pattern="[1001-1022]{4}" title="Please enter a 4-digit number" required aria-describedby="emailHelp" placeholder="Stock Id" required>
                          
                       </div>
                       <!--div class="form-group">
@@ -272,110 +438,56 @@
       </div>
     </section>
 
-
-
-    <!--BLOCK ROW START-->
-
-    <!-- //pricing version 1 -->
-
-    <!-- pricing version 2 -->
-    <!--div class="pricing-version-2">
-      <div class="card card_border mb-5">
-        <div class="cards__heading">
-          <h3>Stock Entry<span> Register</span></h3>
+   <!--footer Section Started-->
+<footer section start>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>Location:</h6>
+          <br>
+          <p class="text-justify" text-align: center;>
+            SVR Engineering College<br>
+            &nbsp&nbsp&nbsp&nbsp   Ayyaluru,Nandyal<br>
+            &nbsp&nbsp&nbsp&nbsp  &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp  &nbsp&nbsp&nbsp&nbsp     AP</p>
         </div>
-        <div class="card-body">
-          <div class="row px-2">
 
-            < Table #1 >
-            <div class="col-lg-4 col-md-6 px-2 mb-4">
-              <div class="card text-center card__hover">
-                <div class="card-header">
-                  <h3 class="display-4"><span class="currency">$</span>19<span class="period">/month</span></h3>
-                </div>
-                <div class="card-block">
-                  <h4 class="card-title">
-                    Basic Plan
-                  </h4>
-                  <ul class="list-group">
-                    <li class="list-group-item">1 Domain</li>
-                    <li class="list-group-item">Ultimate Features</li>
-                    <li class="list-group-item">Responsive Ready</li>
-                    <li class="list-group-item">Editor Ready Builder</li>
-                    <li class="list-group-item">Limited UI Blocks</li>
-                    <li class="list-group-item">24/7 Support System</li>
-                  </ul>
-                  <a href="#" class="btn btn-style btn-primary mt-4">Choose Plan</a>
-                </div>
-              </div>
-            </div>
+        <div class="col-xs-6 col-md-3">
+          <h6>Mail Us:</h6>
+          <br>
+          <ul class="footer-links">
+            <p><strong>Phone : +91 6302348787</strong>
+            <li><a href="mailto:21438cm047@svrec.ac.in">21438cm047@svrec.ac.in</a></li>
+             </ul>
+        </div>
 
-            < Table #2>
-            <div class="col-lg-4 col-md-6 px-2 mb-4">
-              <div class="card text-center card__hover">
-                <div class="card-header">
-                  <h3 class="display-4"><span class="currency">$</span>29<span class="period">/month</span></h3>
-                </div>
-                <div class="card-block">
-                  <h4 class="card-title">
-                    Regular Plan
-                  </h4>
-                  <ul class="list-group">
-                    <li class="list-group-item">10 Domain</li>
-                    <li class="list-group-item">Ultimate Features</li>
-                    <li class="list-group-item">Responsive Ready</li>
-                    <li class="list-group-item">Editor Ready Builder</li>
-                    <li class="list-group-item">Unlimited UI Blocks</li>
-                    <li class="list-group-item">24/7 Support System</li>
-                  </ul>
-                  <a href="#" class="btn btn-style btn-primary mt-4">Choose Plan</a>
-                </div>
-              </div>
-            </div>
-
-            <Table #3 >
-            <div class="col-lg-4 col-md-6 px-2 mb-4">
-              <div class="card text-center card__hover">
-                <div class="card-header">
-                  <h3 class="display-4"><span class="currency">$</span>39<span class="period">/month</span></h3>
-                </div>
-                <div class="card-block">
-                  <h4 class="card-title">
-                    Premium Plan
-                  </h4>
-                  <ul class="list-group">
-                    <li class="list-group-item">15 Domain</li>
-                    <li class="list-group-item">Ultimate Features</li>
-                    <li class="list-group-item">Responsive Ready</li>
-                    <li class="list-group-item">Editor Ready Builder</li>
-                    <li class="list-group-item">Unlimited UI Blocks</li>
-                    <li class="list-group-item">24/7 Support System</li>
-                  </ul>
-                  <a href="#" class="btn btn-style btn-primary mt-4">Choose Plan</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
+        <div class="col-xs-6 col-md-3">
+          <h6>Opening Hours:</h6>
+          <br>
+          <ul class="footer-links">
+            Working Hours : 8am-10pm<br>
+            Sunday (closed)
+          </ul>
         </div>
       </div>
-    </div-->
-    <!-- //pricing version 2 -->
-    </section>
-    <!-- //pricing -->
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          </p>
+        </div>
 
-  </div>
-  <!-- //content -->
-
-</div>
-<!-- main content end-->
-</section>
-<!--footer section start>
-<footer class="dashboard">
-  <p>&copy 2020 Collective. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank"
-      class="text-primary">W3layouts.</a></p>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="https://www.facebook.com/SVREC.NDL"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="facebook" href="https://www.youtube.com/channel/UC7fczHCA-HT6BXdwJrU8M6A"><i class="fa fa-youtube"></i></a></li>
+        </div>
+      </div>
+    </div>
 </footer>
-<footer section end-->
+</footer>
+<!--footer section end-->
 <!-- move top -->
 <button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
   <span class="fa fa-angle-up"></span>
